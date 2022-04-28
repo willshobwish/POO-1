@@ -26,5 +26,9 @@ namespace _2022_04_28_Aula03
             this.nota3 = nota3;
             this.nota4 = nota4;
         }
+        public string ReturnName()
+        {
+            return this.name;
+        }
     }
 }
