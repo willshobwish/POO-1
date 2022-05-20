@@ -7,7 +7,6 @@ package exercicio01;
 public class Principal{
     public static void main(String[] args) {
         Sistema sistema = new Sistema();
-        sistema.test();
-        System.out.println("Teste");
+        sistema.execute();
     }
 }

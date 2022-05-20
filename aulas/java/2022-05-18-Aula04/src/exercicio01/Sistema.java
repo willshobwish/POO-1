@@ -14,7 +14,7 @@ public class Sistema {
 
     private int Maximo = 100;
     private Alunos AlunosVetor[];
-    private int Contador;
+    private int Contador = 0;
 
     private int menu() {
         String MenuString = "MENU\n"
@@ -25,13 +25,10 @@ public class Sistema {
                 + "5 – IMC maior que um valor\n"
                 + "9 – Sair\n";
         System.out.println(MenuString);
+        System.out.println("Digite uma opcao: ");
         Scanner scan = new Scanner(System.in);
         int operation = Integer.parseInt(scan.nextLine());
         return operation;
-    }
-
-    public void test() {
-        menu();
     }
 
     public void execute() {
@@ -79,18 +76,20 @@ public class Sistema {
                     }
                     break;
                 case 3:
-                    if(Contador>0){
+                    if (Contador > 0) {
                         for (int index = 0; index < Contador; index++) {
                             AlunosVetor[index].exibir();
                         }
-                    }else{
+                    } else {
                         System.out.println("Nao ha alunos cadastrados");
                     }
                     break;
-                case 4:
-                    
+                case 9:
+                    break;
+                default:
+                    System.out.println("Opcao invalida");
+                    break;
             }
-
         } while (Operation != 9);
     }
 }
