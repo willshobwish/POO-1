@@ -93,6 +93,7 @@ public class Sistema {
                         System.out.println("Posicao da conta: " + index + "\nTitular: " + VetorContas[index].getTitular() + "\n");
                     }
                     break;
+
                 case 5:
                     for (int index = 0; index < Contador; index++) {
                         System.out.println("Numero da conta: ");
@@ -110,6 +111,7 @@ public class Sistema {
                 case 6:
 
                     break;
+
                 case 7:
 
                     break;
