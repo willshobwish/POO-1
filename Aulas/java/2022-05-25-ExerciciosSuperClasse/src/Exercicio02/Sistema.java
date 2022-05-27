@@ -4,7 +4,6 @@
  */
 package Exercicio02;
 
-import java.awt.BorderLayout;
 import java.util.Scanner;
 
 /**
@@ -82,8 +81,16 @@ public class Sistema {
                     Quantidade++;
                     break;
                 case 4:
+                    for (int index = 0; index < Quantidade; index++) {
+                        if (VetorProdutos[index] instanceof ProdutosEstaduais) {
+                            VetorProdutos[index].Exibir();
+                        }
+                    }
+                    break;
                 case 5:
+                    break;
                 case 6:
+                    break;
                 case 7:
                     for (int index = 0; index < Quantidade; index++) {
                         VetorProdutos[index].Exibir();
