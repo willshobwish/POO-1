@@ -8,8 +8,10 @@ package Exercicio02;
  *
  * @author Willian
  */
-public class ProdutosImportados extends ProdutosNacionais {
+public class ProdutosImportados extends Produtos {
 
+    protected float Imposto;
+    protected float Taxa;
     protected float TaxaImportacao;
 
 //    Construtor sem parametros
@@ -18,7 +20,8 @@ public class ProdutosImportados extends ProdutosNacionais {
 
 //Construtor com parametros
     public ProdutosImportados(String Descricao, float Valor, float Imposto, float Taxa, float TaxaImportacao) {
-        super(Descricao, Valor, Imposto, Taxa);
+        super(Descricao, Valor);
+        this.Imposto = Imposto;
         this.TaxaImportacao = TaxaImportacao;
     }
 

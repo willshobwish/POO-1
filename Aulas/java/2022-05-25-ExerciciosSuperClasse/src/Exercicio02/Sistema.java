@@ -12,18 +12,18 @@ import java.util.Scanner;
  */
 public class Sistema {
 
-    private ProdutosEstaduais[] VetorProdutos;
+    private Produtos[] VetorProdutos;
     private int Maximo = 100;
     private String StringMenu = """
                             MENU
-                            1 – Cadastrar Produto Estadual
-                            2 – Cadastrar Produto Nacional
-                            3 – Cadastrar Produto Importado
-                            4 – Exibir Produtos Estaduais
-                            5 – Exibir Produtos Nacionais
-                            6 – Exibir Produtos Importados
-                            7 – Exibir Todos Produtos
-                            9 – SAIR
+                            1 - Cadastrar Produto Estadual
+                            2 - Cadastrar Produto Nacional
+                            3 - Cadastrar Produto Importado
+                            4 - Exibir Produtos Estaduais
+                            5 - Exibir Produtos Nacionais
+                            6 - Exibir Produtos Importados
+                            7 - Exibir Todos Produtos
+                            9 - SAIR
                             """;
 
     public int Menu() {
@@ -33,7 +33,7 @@ public class Sistema {
     }
 
     public void Executar() {
-        VetorProdutos = new ProdutosEstaduais[Maximo];
+        VetorProdutos = new Produtos[Maximo];
         int Quantidade = 0, Operacao;
         String Descricao;
         float Valor, Imposto, Taxa, TaxaImportacao;
@@ -88,13 +88,25 @@ public class Sistema {
                     }
                     break;
                 case 5:
+                    for (int index = 0; index < Quantidade; index++) {
+                        if (VetorProdutos[index] instanceof ProdutosNacionais) {
+                            VetorProdutos[index].Exibir();
+                        }
+                    }
                     break;
                 case 6:
+                    for (int index = 0; index < Quantidade; index++) {
+                        if (VetorProdutos[index] instanceof ProdutosImportados) {
+                            VetorProdutos[index].Exibir();
+                        }
+                    }
                     break;
                 case 7:
                     for (int index = 0; index < Quantidade; index++) {
                         VetorProdutos[index].Exibir();
                     }
+                    break;
+                case 9:
                     break;
                 default:
                     System.out.println("Operacao invalida, digite novamente");

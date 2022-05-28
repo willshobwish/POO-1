@@ -8,21 +8,17 @@ package Exercicio02;
  *
  * @author Willian
  */
-public class ProdutosEstaduais {
+public class ProdutosEstaduais extends Produtos {
 
-    protected String Descricao;
-    protected float Valor;
     protected float Imposto;
 
 //    Construtor sem parametros
     public ProdutosEstaduais() {
-
     }
 
 //    Construtor com parametros
     public ProdutosEstaduais(String Descricao, float Valor, float Imposto) {
-        this.Descricao = Descricao;
-        this.Valor = Valor;
+        super(Descricao, Valor);
         this.Imposto = Imposto;
     }
 
@@ -33,7 +29,6 @@ public class ProdutosEstaduais {
         System.out.println("Valor: " + Valor);
         System.out.println("Imposto: " + Imposto);
         System.out.println("");
-
     }
 
 //    Getter
