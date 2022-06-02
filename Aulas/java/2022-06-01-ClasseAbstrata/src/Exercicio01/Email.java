@@ -12,8 +12,9 @@ public class Email extends Contato {
 
     private String EnderecoEmail;
 
-    public Email(String EnderecoEmail) {
-        EnderecoEmail = this.EnderecoEmail;
+    public Email(String EnderecoEmail, String TipoContato) {
+        super(TipoContato);
+        this.EnderecoEmail = EnderecoEmail;
     }
 
     @Override

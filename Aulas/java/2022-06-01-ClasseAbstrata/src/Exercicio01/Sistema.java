@@ -10,4 +10,7 @@ package Exercicio01;
  */
 public class Sistema {
 
+    public void Executar() {
+        System.out.println("Teste");
+    }
 }

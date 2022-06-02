@@ -12,8 +12,9 @@ public class Telefone extends Contato {
 
     private String NumeroTelefone;
 
-    public Telefone(String NumeroTelefone) {
-        NumeroTelefone = this.NumeroTelefone;
+    public Telefone(String NumeroTelefone, String TipoContato) {
+        super(TipoContato);
+        this.NumeroTelefone = NumeroTelefone;
     }
 
     @Override

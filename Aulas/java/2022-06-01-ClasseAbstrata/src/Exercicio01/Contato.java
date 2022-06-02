@@ -10,10 +10,10 @@ package Exercicio01;
  */
 public abstract class Contato {
 
-    protected String Tipo;
+    protected String TipoContato;
 
-    public Contato(String Contato) {
-
+    public Contato(String TipoContato) {
+        this.TipoContato = TipoContato;
     }
 
     public abstract void Exibir();
