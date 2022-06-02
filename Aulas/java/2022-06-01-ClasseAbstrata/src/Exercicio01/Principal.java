@@ -11,8 +11,10 @@ package Exercicio01;
 public class Principal {
 
     public static void main(String[] args) {
-        Sistema sis = new Sistema();
-        sis.Executar();
+        Pessoa Teste = new Pessoa("Teste", 2000);
+        Teste.AdicionarContato(new Email("AAAAAAAAAAAAAA"));
+        Teste.AdicionarContato(new Telefone("@@@@@@@@@@@@@@"));
+        System.out.println(Teste.GetContatos());
     }
 
 }

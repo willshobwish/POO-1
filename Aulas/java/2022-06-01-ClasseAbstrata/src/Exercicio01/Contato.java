@@ -12,9 +12,14 @@ public abstract class Contato {
 
     protected String TipoContato;
 
-    public Contato(String TipoContato) {
-        this.TipoContato = TipoContato;
+    public Contato() {
+        TipoContato = "Contato";
     }
 
+//    Metodos abstratos nao podem possuir "corpo", isso eh para tornar obrigatorio a criacao do metodo
     public abstract void Exibir();
+
+    public String GetTipo() {
+        return TipoContato;
+    }
 }
